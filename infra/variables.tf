@@ -89,7 +89,7 @@ variable "disk_type" {
 variable "disk_size" {
   description = "Размер диска (ГБ)"
   type        = number
-  default     = 8
+  default     = 12
 }
 
 variable "nat" {
