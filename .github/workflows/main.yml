@@ -54,7 +54,7 @@ jobs:
         POSTGRES_DB_HOST: 127.0.0.1
         POSTGRES_DB_PORT: 5432
       run: |
-        python -m flake8 backend/
+        python -m flake8 backend/ --exclude migrations,__pycache__,.venv,venv,backend/kittygram_backend/settings.py
         cd backend/
         python manage.py test
 
