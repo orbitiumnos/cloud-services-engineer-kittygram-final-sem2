@@ -32,7 +32,7 @@ variable "aws_region" {
 variable "ssh_user" {
   description = "Аккаунт"
   type        = string
-  default     = "user"
+  default     = "orbitiumnos"
 }
 
 variable "ssh_key" {
