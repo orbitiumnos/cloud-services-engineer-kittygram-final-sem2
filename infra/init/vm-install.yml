@@ -2,12 +2,12 @@
 ssh_pwauth: false
 
 users:
-  - name: ${SSH_USER}
-    sudo: ALL=(ALL) NOPASSWD:ALL
+  - name: orbitiumnos
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
     shell: /bin/bash
     groups: sudo, docker
     ssh_authorized_keys:
-      - ${SSH_KEY}
+      - ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILTLhEeB2QvJbH/p6/Y3ltNo3C5fVczWFxcEGQwSc0sb
 
 write_files:
   - path: /root/vm_prep.sh
