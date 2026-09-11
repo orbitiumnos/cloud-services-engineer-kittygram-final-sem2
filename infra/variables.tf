@@ -53,7 +53,7 @@ variable "folder_id" {
 variable "zone" {
   description = "Зона доступности по умолчанию"
   type        = string
-  default     = "ru-central1-a"
+  default     = "ru-central1-b"
 }
 
 variable "platform_id" {
