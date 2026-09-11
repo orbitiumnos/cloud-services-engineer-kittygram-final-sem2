@@ -97,3 +97,9 @@ variable "nat" {
   type        = bool
   default     = true
 }
+
+variable "gateway_port" {
+  description = "Public HTTP port of the gateway service"
+  type        = number
+  default     = 8080
+}
