@@ -1,4 +1,4 @@
-name: Main KittyGram workflow
+name: Deploy workflow
 
 on:
   push:
