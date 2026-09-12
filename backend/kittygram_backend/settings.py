@@ -12,7 +12,9 @@ SECRET_KEY = os.getenv('SECRET_KEY', get_random_secret_key())
 
 DEBUG = str(os.getenv('DEBUG', default=False)).lower() == 'true'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1;localhost').split(';')
+ALLOWED_HOSTS = [
+    h.strip() for h in os.getenv("ALLOWED_HOSTS", "127.0.0.1,localhost,84.201.176.191,backend,gateway").split(",")
+]
 
 STATIC_ROOT = '/static/static/'
 
