@@ -9,12 +9,19 @@ services:
     env_file: .env
     volumes:
       - pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U kittygram_user -d kittygram" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
 
   backend:
     image: orbitiumnos/kittygram_backend
     env_file: .env
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     volumes:
       - static:/static
       - media:/app/media
